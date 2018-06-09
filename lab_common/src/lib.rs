@@ -12,7 +12,7 @@ pub fn get_user_input<T: FromStr>(prompt_opt: Option<&str>) -> T {
 
     let mut buf = String::new();
     stdin_inst.read_line(&mut buf).expect("Unable to read line from stdin!");
-    match buf.parse() {
+    match buf.trim_right().parse() {
         Ok(parsed) => parsed,
         Err(_) => {
             println!("Error while parsing the supplied input; please try again.");
