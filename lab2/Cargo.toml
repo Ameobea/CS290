@@ -1,7 +1,10 @@
 [package]
+authors = ["Casey Primozic <me@ameo.link>"]
 name = "lab2"
 version = "0.1.0"
-authors = ["Casey Primozic <me@ameo.link>"]
 
 [dependencies]
-lab_common = { path = "../lab_common" }
+rand = "0.5.1"
+
+[dependencies.lab_common]
+path = "../lab_common"

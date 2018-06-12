@@ -38,6 +38,7 @@ fn sum_digits(input: isize) -> usize {
 }
 
 fn is_divisible_by_3(number: isize) -> bool {
+    let digits_sum = sum_digits(number);
     match digits_sum {
         0 | 1 | 2 | 4 | 5 | 7 | 8 => false,
         3 | 6 | 9 => true,

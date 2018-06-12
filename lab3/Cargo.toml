@@ -1,0 +1,9 @@
+[package]
+name = "lab3"
+version = "0.1.0"
+authors = ["Casey Primozic <me@ameo.link>"]
+
+[dependencies]
+rand = "0.3.14"
+
+lab_common = { path = "../lab_common" }
