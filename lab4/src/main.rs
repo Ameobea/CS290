@@ -54,10 +54,16 @@ fn collatz(mut n: usize) -> usize {
     count
 }
 
+const CONJECTURE_MSG: &'static str =
+    "Enter a positive integer > 0 with which to test the Collatz Conjecture: ";
+
 fn part3() {
-    let input: usize = get_user_input(
-        Some("Enter a positive integer with which to test the Collatz Conjecture: ")
-    );
+    let mut input: usize = get_user_input(Some(CONJECTURE_MSG));
+    while input == 0 {
+        println!("You must enter a number greater than zero!");
+        input = get_user_input(Some(CONJECTURE_MSG));
+    }
+
     let count = collatz(input);
     println!("Iterations: {}", count);
 }
@@ -65,5 +71,8 @@ fn part3() {
 fn main() {
     part1();
     part2();
-    part3();
+
+    loop {
+        part3();
+    }
 }
