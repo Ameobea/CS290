@@ -1,0 +1,6 @@
+[package]
+name = "lab6"
+version = "0.1.0"
+authors = ["Casey Primozic <me@ameo.link>"]
+
+[dependencies]
