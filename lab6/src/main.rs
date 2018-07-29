@@ -1,5 +1,5 @@
 fn main() {
-    fizzbuzz(100);
+    fizzbuzz(50);
 }
 
 fn fizzbuzz(count: usize) {
